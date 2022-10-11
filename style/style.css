@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  src:  url("../fonts/ProximaNova-Regular.eot") format("eot"), 
+        url("../fonts/ProximaNova-Regular.ttf") format("ttf"),
+        url("../fonts/ProximaNova-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 700;
+  src:  url("../fonts/ProximaNovaCond-Bold.eot") format("eot"), 
+        url("../fonts/ProximaNovaCond-Bold.ttf") format("ttf"),
+        url("../fonts/ProximaNovaCond-Bold.woff") format("woff");
+}
+
+
+:root {
+  --aquamarine: #44C697;
+  --darkGrey: #1E2E36;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.3%;
+}
+
+body {
+  font-size: 1.8rem;
+  width: 100%;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.006em;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 6rem;
+  margin-bottom: 50px;
+  z-index: 100;
+  text-align: center;
+  position: relative;
+}
+
+h2 span {
+  position: absolute;
+  width: 20px;
+  height: 100%;
+  background-color: var(--aquamarine);
+  z-index: -1;
+  margin-left: -5px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 4.5rem;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+.btn {
+  background-color: var(--aquamarine);
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 14px 46px;
+  border-radius: 3px;
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 1920px;
+  padding: 0 50px 100px;
+  margin: 0 auto;
+}
+
+
+.b-main {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 100px;
+}
+.b-main_block {
+  background-color: #ffffff;
+  padding: 100px 75px;
+  text-align: center;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+
+.benefits_slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 586px;
+  min-height: 350px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  cursor: pointer;
+}
+.benefits_slide-title {
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 18px;
+}
+.benefits_slide-title::after {
+  position: absolute;
+  content: '';
+  width: 27rem;
+  height: 3px;
+  background-color: var(--aquamarine);
+  bottom: 0;
+  left: 0;
+}
+.benefits_slide-text {
+  display:none ;
+  font-size: 1.4rem;
+  color: #eeeeee;
+}
+.benefits_slide:hover .benefits_slide-text {
+  display: block;
+}
+
+.owl-carousel .owl-nav{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  top: 50%;
+}
+.nav-btn {
+  background-color: #ffffff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
