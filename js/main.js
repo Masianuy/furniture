@@ -2,14 +2,14 @@
 
 $(document).ready(function(){
   $('#main-slider').slick({
-    arrow: true,
+    arrow: false,
     infinite: true,
+    autoplay: true,
     speed: 500,
     fade: true,
     cssEase: 'linear',
     slidesToShow: 1,
-    // prevArrow: '<button class="slide-arrow prev-arrow"></button>',
-    // nextArrow: '<button class="slide-arrow next-arrow"></button>'
+    slidesToScroll: 1,
   });
 });
 
@@ -18,6 +18,7 @@ $(document).ready(function(){
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    fade: true,
     dots: true,
     responsive: [
       {

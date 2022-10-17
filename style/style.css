@@ -345,8 +345,8 @@ select::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  width: 450px;
-  min-height: 350px;
+  /* width: 450px; */
+  height: 350px;
   padding: 30px;
   display: -webkit-box!important;
   display: -ms-flexbox!important;
@@ -362,7 +362,7 @@ select::before {
       -ms-flex-align: start;
           align-items: flex-start;
   cursor: pointer;
-  margin: 15px;
+  margin: 0 10px;
 }
 .benefits_slide-title {
   color: #ffffff;
@@ -400,6 +400,9 @@ select::before {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.benefits_slider .slick-list {
+  margin: 0px -10px 0px -10px;
 }
 /* CATEGORIES */
 .category_list {
