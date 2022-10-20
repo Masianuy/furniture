@@ -16,10 +16,9 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('#benefits_slider').slick({
     infinite: true,
+    dots: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    fade: true,
-    dots: true,
     responsive: [
       {
         breakpoint: 991,
@@ -31,8 +30,8 @@ $(document).ready(function(){
       {
         breakpoint: 700,
         settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       }
     ]

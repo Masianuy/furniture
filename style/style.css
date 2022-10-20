@@ -100,12 +100,7 @@ li {
   font-weight: 700;
   border: 1px solid var(--aquamarine);
   cursor: pointer;
-  -webkit-transition: background-color 500ms linear;
-  -o-transition: background-color 500ms linear;
-  transition: background-color 500ms linear;
-  -webkit-transition: color 400ms linear;
-  -o-transition: color 400ms linear;
-  transition: color 400ms linear;
+  transition: color 0.5s, background-color 1s;
 }
 .btn:hover {
   border: 1px solid var(--aquamarine);
@@ -315,6 +310,23 @@ select::before {
           flex-direction: column;
   position: relative;
   max-width: 450px;
+  visibility: hidden;
+}
+.b-main.slick-active .b-main_block {
+  animation: fadeInDown 1s both 0.5s;
+  visibility: visible;
+}
+@keyframes fadeInDown {
+ 0% {
+  opacity:0;
+  -webkit-transform:translate3d(0,-100%,0);
+  transform:translate3d(0,-100%,0)
+ }
+ 100% {
+  opacity:1;
+  -webkit-transform:none;
+  transform:none
+ }
 }
 .b-main_block::before {
   position: absolute;
@@ -385,6 +397,7 @@ select::before {
 }
 .benefits_slide:hover .benefits_slide-text {
   display: block;
+
 }
 .nav-btn {
   background-color: #ffffff;
@@ -1070,3 +1083,5 @@ footer {
     padding-bottom: 15px;
   }
 }
+
+
