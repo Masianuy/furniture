@@ -19,6 +19,10 @@ $(document).ready(function(){
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+<<<<<<< HEAD
+=======
+    dots: true,
+>>>>>>> e75d276d2291fddd929986566862a32c8d446ea8
     responsive: [
       {
         breakpoint: 991,
