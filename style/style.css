@@ -94,6 +94,7 @@ li {
   background-color: var(--aquamarine);
   color: #ffffff;
   text-transform: uppercase;
+  margin: auto;
   padding: 14px 46px;
   border-radius: 3px;
   font-size: 1.8rem;
@@ -291,28 +292,38 @@ select::before {
 }
 
 /* BANNER */
+.slick-list {
+  overflow: hidden;
+}
+.slick-track {
+  display: flex;
+}
+.main-slider {
+  position: relative;
+}
+.main-slider-img {
+  z-index: 8;
+}
 .b-main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-bottom: 100px;
+  height: 100vh;
+  z-index: -1;
 }
 .b-main_block {
   background-color: #ffffff;
-  padding: 100px 50px;
+  padding: 80px 50px 50px;
   text-align: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  position: relative;
-  max-width: 450px;
+  flex-direction: column;
+  width: 30vw;
+  z-index: 9999;
   visibility: hidden;
+  position: relative;
 }
-.b-main.slick-active .b-main_block {
+.main-slider-content .slick-active .b-main_block {
   animation: fadeInDown 1s both 0.5s;
   visibility: visible;
 }
@@ -327,6 +338,12 @@ select::before {
   -webkit-transform:none;
   transform:none
  }
+}
+.main-slider-content {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 9000;
 }
 .b-main_block::before {
   position: absolute;
@@ -351,29 +368,79 @@ select::before {
   font-size: 4rem;
   padding-bottom: 50px;
 }
+.b-main_slider-count {
+  margin: 20px auto 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  color: var(--darkGrey);
+}
+.slider-count-current {
+  font-size: 3rem;
+}
+.slider-count-all {
+  font-size: 2rem;
+  margin-left: 7px;
+}
+.b-main_block-arrows {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.next-arrow, .prev-arrow {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.next-arrow.slick-disabled,
+.prev-arrow.slick-disabled {
+  background: #ffffff;
+  border: 1px solid var(--darkGrey);
+}
+.next-arrow.slick-disabled svg,
+.prev-arrow.slick-disabled svg {
+  fill: var(--darkGrey);
+}
+.next-arrow {
+  transform: rotate(180deg);
+  width: 30px;
+  height: 30px;
+  background: var(--darkGrey);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+}
+.prev-arrow {
+  width: 30px;
+  height: 30px;
+  background: var(--darkGrey);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+}
 
 /* BENEFITS */
+#benefits_slider {
+  position: relative;
+}
 .benefits_slide {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* width: 450px; */
   height: 350px;
   padding: 30px;
-  display: -webkit-box!important;
-  display: -ms-flexbox!important;
   display: flex!important;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  cursor: pointer;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   margin: 0 10px;
 }
 .benefits_slide-title {
@@ -397,25 +464,59 @@ select::before {
 }
 .benefits_slide:hover .benefits_slide-text {
   display: block;
-
 }
-.nav-btn {
-  background-color: #ffffff;
-  border-radius: 50%;
+#benefits_slider .slick-list {
+  margin: 0px -10px 0px -10px;
+}
+.benefits_slider {
+  position: relative;
+}
+.next-benefit, .prev-benefit {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+.next-benefit {
+  right: 0;
+}
+.prev-benefit {
+  left: 0;
+}
+.next-benefit.slick-disabled,
+.prev-benefit.slick-disabled {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+.next-benefit.slick-disabled svg,
+.prev-benefit.slick-disabled svg {
+  fill: #ffffff;
+}
+.next-benefit {
+  transform: rotate(180deg);
   width: 30px;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
 }
-.benefits_slider .slick-list {
-  margin: 0px -10px 0px -10px;
+.prev-benefit {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
 }
 /* CATEGORIES */
 .category_list {
@@ -513,7 +614,7 @@ select::before {
   font-weight: 700;
 }
 .category_product-status p:nth-child(1) {
-  background-color: #000000;
+  background-color: var(--darkGrey);
   color: #ffffff;
   padding: 7px 12px;
   margin-bottom: 3px;
@@ -819,6 +920,9 @@ footer {
     width: 250px;
     height: 80px;
   }
+  .b-main_block {
+    width: 40vw;
+  }
   .category_product {
     -ms-flex-preferred-size: 340px;
         flex-basis: 340px;
@@ -926,7 +1030,10 @@ footer {
   }
   .b-main_block {
     padding: 45px 25px;
-    max-width: 50%;
+    width: 65vw;
+  }
+  .main-slider-content {
+    left: 20px;
   }
   .b-main_block p:nth-child(1) {
     font-size: 5rem;
@@ -987,9 +1094,6 @@ footer {
   }
   .b-main_block {
     padding: 30px 25px;
-    max-width: 90%;
-    margin-top: 41%;
-    margin-bottom: -25px;
   }
   .b-main_block p:nth-child(3) {
     padding-bottom: 25px;
@@ -1068,9 +1172,9 @@ footer {
   }
   .b-main_block {
     padding: 20px;
-    max-width: 100%;
-    margin-top: 59%;
-    margin-bottom: -120px;
+    top: 20px;
+    width: 90vw;
+    margin-bottom: 20px;
   }
   .b-main_block p:nth-child(1) {
     display: none;
@@ -1083,5 +1187,3 @@ footer {
     padding-bottom: 15px;
   }
 }
-
-

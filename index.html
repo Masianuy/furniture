@@ -42,7 +42,7 @@
         </div>
         <ul class="topbar-right topbar-list">
           <li>
-            <a href="#" class="topbar-link active">Головна</a>
+            <a href="#" class="topbar-link active">Home</a>
           </li>
           <li>
             <a href="#" class="topbar-link">Акції</a>
@@ -152,34 +152,66 @@
     </div>
   </header>
 
-
-  <section id="main-slider">
-    <div class="b-main" style="background-image: url('https://images.gessato.com/NvJJUR8.OWDa~b707/w:1360/h:891/q:100/https://www.gessato.com/wp-content/uploads/2020/11/gessato-scandinavian-design-7.jpg');">
-      <div class="container">
+  <section class="main-slider">
+    <div id="main-slider-content" class="main-slider-content">
+      <div>
         <div class="b-main_block">
           <p>Наша робота!</p>
           <p>Вітальня Scandi</p>
           <p>Поєднавши естетику скандинавського дизайну та досвід</p>
           <button type="button" class="btn">Детальніше</button>
+          <div class="b-main_slider-count">
+            <span class="slider-count-current">01</span>/<span class="slider-count-all"></span>
+          </div>
+          <div class="b-main_block-arrows">
+            <div class="prev-arrow">
+              <svg width="7" height="12" fill="#ffffff">
+                <use href="#prev-arrow"/>
+              </svg>
+            </div>
+            <div class="next-arrow">
+              <svg width="7" height="12" fill="#ffffff">
+                <use href="#prev-arrow"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="b-main" style="background-image: url('./images/b-main.jpg');">
-      <div class="container">
+      <div>
         <div class="b-main_block">
           <p>Новинка!</p>
           <p>Ліжко Ornella</p>
           <p>Це новий рівень комфортного сну</p>
           <button type="button" class="btn">Детальніше</button>
+          <div class="b-main_slider-count">
+            <span class="slider-count-current">02</span>/<span class="slider-count-all"></span>
+          </div>
+          <div class="b-main_block-arrows">
+            <div class="prev-arrow">
+              <svg width="7" height="12" fill="#ffffff">
+                <use href="#prev-arrow"/>
+              </svg>
+            </div>
+            <div class="next-arrow">
+              <svg width="7" height="12" fill="#ffffff">
+                <use href="#prev-arrow"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="main-slider-img">
+      <div class="b-main" style="background-image: url('https://images.gessato.com/NvJJUR8.OWDa~b707/w:1360/h:891/q:100/https://www.gessato.com/wp-content/uploads/2020/11/gessato-scandinavian-design-7.jpg');"></div>
+      <div class="b-main" style="background-image: url('./images/b-main.jpg');"></div>
     </div>
   </section>
 
   <section class="benefits">
     <div class="container">
       <h2 class="benefits_title"><span></span>Наші переваги</h2>
-        <div id="benefits_slider" class="benefits_slider">
+      <div class="benefits_slider">
+        <div id="benefits_slider">
           <div class="benefits_slide" style="background-image: url('./images/Rectangle1.jpg');">
             <h3 class="benefits_slide-title">Меблі преміум класу</h3>
             <p class="benefits_slide-text">Меблі преміум класу</p>
@@ -192,7 +224,22 @@
             <h3 class="benefits_slide-title">Безкоштовна доставка</h3>
             <p class="benefits_slide-text">Безкоштовна доставка</p>
           </div>
+          <div class="benefits_slide" style="background-image: url('./images/Rectangle3.jpg');">
+            <h3 class="benefits_slide-title">Безкоштовна доставка</h3>
+            <p class="benefits_slide-text">Безкоштовна доставка</p>
+          </div>
         </div>
+        <div class="prev-benefit">
+          <svg width="7" height="12" fill="transparernt">
+            <use href="#prev-arrow"/>
+          </svg>
+        </div>
+        <div class="next-benefit">
+          <svg width="7" height="12" fill="transparernt">
+            <use href="#prev-arrow"/>
+          </svg>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -989,6 +1036,9 @@
       <rect width="100" height="100" fill="white"/>
       </clipPath>
       </defs>
+    </symbol>
+    <symbol id="prev-arrow" width="7" height="12" viewBox="0 0 7 12">
+      <path d="M0.478261 5.86955C0.478261 5.65916 0.556552 5.44879 0.712807 5.28839L5.63226 0.240819C5.9452 -0.0802729 6.45258 -0.0802729 6.76539 0.240819C7.0782 0.56178 7.0782 1.08227 6.76539 1.40339L2.41238 5.86955L6.76524 10.3357C7.07805 10.6568 7.07805 11.1773 6.76524 11.4982C6.45243 11.8194 5.94505 11.8194 5.63211 11.4982L0.712655 6.4507C0.556376 6.29022 0.478261 6.07986 0.478261 5.86955Z"/>
     </symbol>
   </svg>
 

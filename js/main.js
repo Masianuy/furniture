@@ -1,24 +1,43 @@
 
 
 $(document).ready(function(){
-  $('#main-slider').slick({
-    arrow: false,
-    infinite: true,
+  $('.main-slider-img').slick({
+    arrows: false,
+    infinite: false,
     autoplay: true,
     speed: 500,
     fade: true,
     cssEase: 'linear',
     slidesToShow: 1,
     slidesToScroll: 1,
+    asNavFor: '.main-slider-content',
+  });
+});
+$(document).ready(function(){
+  $('.main-slider-content').slick({
+    arrows: true,
+    infinite: false,
+    autoplay: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    asNavFor: '.main-slider-img',
+    prevArrow:'.prev-arrow',
+    nextArrow:'.next-arrow',
   });
 });
 
 $(document).ready(function(){
   $('#benefits_slider').slick({
-    infinite: true,
+    infinite: false,
     dots: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    draggable:true,
+    prevArrow:'.prev-benefit',
+    nextArrow:'.next-benefit', 
     responsive: [
       {
         breakpoint: 991,
@@ -30,6 +49,7 @@ $(document).ready(function(){
       {
         breakpoint: 700,
         settings: {
+          arrows: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -71,4 +91,12 @@ const categoriesContent = document.querySelectorAll('.category_content');
       currentCategory.classList.add('active');
       currentContaier.classList.add('active');
     })
-  })
+  });
+
+const allSliders = document.querySelectorAll('.main-slider-content .b-main_block');
+const allSlidersNumber = document.querySelectorAll('.slider-count-all');
+allSlidersNumber.forEach(item => {
+  if(allSliders.length < 10) {
+    item.innerHTML = '0' + allSliders.length;
+  }
+})
